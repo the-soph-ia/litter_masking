@@ -6,7 +6,7 @@ import math
 
 # Update Method #1: calculate most common color groupings and filter by prevalence of that color within the frame
 # I'd suggest uncommenting the matplotlib plot; it looks more impressive than a mask that doesn't work very well lol
-video = cv2.VideoCapture('few_plants.MOV')
+video = cv2.VideoCapture('Inputs/few_plants.MOV')
 
 while True:
 
@@ -36,8 +36,8 @@ while True:
     # cv2.rectangle(frame, target_pt1, target_pt2, (0,255,0), 1)
 
     img_hsv = cv2.cvtColor(clean_frame,cv2.COLOR_BGR2HSV)
-    cv2.imwrite('cig_frame_hsv.jpg', img_hsv)
-    frame = Image.open('cig_frame_hsv.jpg')
+    cv2.imwrite('Inputs/cig_frame_hsv.jpg', img_hsv)
+    frame = Image.open('Inputs/cig_frame_hsv.jpg')
     pixels = list(frame.getdata())
 
     flat = [x for sets in pixels for x in sets]

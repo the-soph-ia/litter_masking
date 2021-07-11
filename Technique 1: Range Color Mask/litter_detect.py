@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # specify the file that's being read
-video = cv2.VideoCapture('few_plants.MOV')
+video = cv2.VideoCapture('Inputs/few_plants.MOV')
 # 'few_plants.MOV'
 # 'cigarette.MOV'
 # 'patchy_ground.MOV'

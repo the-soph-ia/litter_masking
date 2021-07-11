@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
+'''This file is mostly for testing purposes'''
+
 '''Resize'''
 # img = cv2.imread('cig_frame.jpg')
 # h,w,_ = img.shape
