@@ -26,3 +26,10 @@ https://time.com/5949983/trash-pandemic/
 - - Get object's position relative to the camera
 - - Improve detection algorithm
 - - Add detection for multi-colored or unique pieces of trash
+
+# Different Approaches
+### Iteration 1:
+I used a simple color mask through OpenCV to filter out certain colors from the image. I focused on filtering out white-ish tones since that's the color of most cigarettes, plastics, and paper trash, so even getting that much would be useful. This model worked decently, though it was definitely better suited for high-contrast environments. I did not add any way to track the object's location, so the only use at this stage is in visual recognition, not tracking.
+
+### Iteration 2:
+In an attempt to make the litter detection more dynamic relative to the ground around it, I tried creating a graph of the hue values throughout each image frame. By finding the peaks in the graph, I could isolate chunks of color at a time. However, this process ended up making the code run much slower with minimal to no benefit relative to the previous method. While in theory it should be possible to tweak this method and make it work better, especially for detecting different types of trash that aren't white, there are a lot of parameters to consider; it would probably be better to move on to contouring and focus on how to gather the object's position at any given time. 
